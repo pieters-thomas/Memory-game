@@ -1,0 +1,210 @@
+*{box-sizing: border-box}
+
+body{
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.menu{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-right: 12.5%;
+    width: 25%;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content p {
+    text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 300px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;
+    width: 500px;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+button{
+    width:25%;
+    border: none;
+    color: white;
+    padding: 9px 32px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    background: #0988FF;
+}
+
+button:active{
+    background: white;
+    color:  #0988FF;
+}
+#info:hover{
+    background: white;
+    color:  #0988FF;
+}
+
+
+button#info{
+    width: 100%;
+    cursor:help;
+}
+button#game_start{
+    float: left;
+    margin-left: 12.5%;
+    cursor: pointer;
+}
+
+header{background-color: #555555;
+    width: 100%}
+
+#main{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: url("images/background.png")  no-repeat center;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 31px;
+}
+
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 42%;
+    text-align: center;
+    padding:20px 10px 20px 10px;
+    border-radius: 15px;
+    background: #666666;
+}
+
+.test-banner{
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    color:yellow;
+    text-align: left;
+    font-family: "Courier 10 Pitch", serif;
+}
+
+h2{
+    font-size: 40px;
+    padding: 0;
+    margin:0;
+}
+
+#game_start{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.flip-box {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 15px;
+    width: 170px;
+    height: 170px;
+    perspective: 1000px;
+    margin: 3px;
+    cursor: pointer;
+}
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-box-front {
+    background-color:yellow;
+    color: black;
+}
+.flip-box-back {
+    border: 7px solid yellow;
+    background-color: white;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width:1720px) {
+    .container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 15px;
+        background: #666666;
+    }
+}
+@media screen and (max-width:1430px) {
+    .container{
+        width: 60%;
+    }
+}
+@media screen and (max-width:1200px) {
+    .container{
+        width: 70%;
+    }
+}
+@media screen and (max-width:1030px) {
+    .container{
+        width: 80%;
+    }
+}
+@media screen and (max-width:900px) {
+    .container{
+        width: 90%;
+    }
+}
+@media screen and (max-width:800px) {
+    .container{
+        width: 100%;
+    }
+}
