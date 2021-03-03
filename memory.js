@@ -1,7 +1,7 @@
 let arcana = [{'src': 'images/strength.png'}, {'src': 'images/perception.png'}, {'src': 'images/endurance.png'}, {'src': 'images/charisma.png'}, {'src': 'images/intelligence.png'}, {'src': 'images/agility.png'},
     {'src': 'images/luck.png'}, {'src': 'images/sleepy.png'}]
 
-let card = document.getElementsByClassName('flip-box-inner');
+let card = document.getElementsByClassName('flip-box');
 let cards = [...card];
 let compare = [];
 let score = 0;
@@ -41,11 +41,13 @@ function FullGame() {
         })
     }
     function turn(obj) {
+
         if (obj.style.transform === 'rotateY(180deg)') obj.style.transform = 'rotateY(0deg)';
         else obj.style.transform = 'rotateY(180deg)';
     }
 
     function check(obj, index) {
+
         if (compare.length === 2) {
             if (obj.suit === compare[1] && index !== compare[0]) {
                 console.log('Match!');
@@ -75,7 +77,7 @@ document.getElementById('game_start').addEventListener('click', function () {
     if(compare.length <= 2){
         score = 0;
         compare = [];
-        document.querySelectorAll('div.flip-box-inner').forEach(
+        document.querySelectorAll('div.flip-box').forEach(
             (card) => {
                 card.style.transform = 'rotateY(0deg)';
             }
@@ -85,7 +87,7 @@ document.getElementById('game_start').addEventListener('click', function () {
             (card) => card.src = ''
         )
 
-        setTimeout(FullGame, 1000);
+        setTimeout(FullGame, 250);
     }
 
 })
